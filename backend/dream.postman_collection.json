@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "69f0afbb-37c6-4ff4-b07f-c3ee1b78bf66",
+		"name": "dream",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39071525"
+	},
+	"item": [
+		{
+			"name": "add admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"moamn\",\r\n    \"name\": \"Admin Name\",\r\n    \"email\": \"admin@moamn.com\",\r\n    \"password\": \"moamn\",\r\n    \"phoneNumber\": \"1234567890\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/admin/addadmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"addadmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@moamn.com\",\r\n    \"password\": \"moamn\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "berore eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2JkZTA2Zjg5NWNjZWY5MzhlNTU1NCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczMTk3Njg2MywiZXhwIjoxNzM0NTY4ODYzfQ.KDCiy-OfpPqMPVj1towscR2CA4htGRcJAxhRDTpSzds",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/admin/deleteuser/6739b3119e00c741801a06e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"deleteuser",
+						"6739b3119e00c741801a06e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "status property",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "breore eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2JkZTA2Zjg5NWNjZWY5MzhlNTU1NCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczMTk4MDk3MywiZXhwIjoxNzM0NTcyOTczfQ.HBnviVfDiLBiRLwfx3-N5vkYuQQWVvHPlUVUuK7-P2M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"statusReq\": \"accepted\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/admin/statusproperty/673325cacfd3353e97853a64/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"statusproperty",
+						"673325cacfd3353e97853a64",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"moamn@example.com\",\r\n    \"password\": \"moamn\",\r\n    \"confirmPassword\": \"moamn\",\r\n    \"birthday\": \"1990-01-01\",\r\n    \"gender\": \"male\",\r\n    \"address\": \"123 Street Name, City, Country\",\r\n    \"phoneNumber\": \"1234567890\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"email\": \"moamn@example.com\",\r\n    \"password\": \"moamn\"\r\n    \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user update profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "breor eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2JlMGYzMmIyYTczZDU5NDY1MWJjNiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMxOTc3NzIxLCJleHAiOjE3MzE5ODEzMjF9.RUKkMaG3L8_y9TazZd3h4F71EBfbjwjQaRBSxSbCR4w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"moamn\",\r\n    \"email\": \"moamn@example.com\",\r\n    \"password\": \"moamn\",\r\n    \"birthday\": \"1999-08-18\",\r\n    \"gender\": \"male\",\r\n    \"address\": \"123 Street Name, damas, Country\",\r\n    \"phoneNumber\": \"1234567890\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/updateprofile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"updateprofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Property",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "svvs eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2JlMGYzMmIyYTczZDU5NDY1MWJjNiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMxOTgyMDk5LCJleHAiOjE3MzQ1NzQwOTl9.IPP8pwYvJByxL4yA9NkYMzWUHr_KsRPlMhCaqNpD4DI",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "City",
+							"value": "Damascus",
+							"type": "text"
+						},
+						{
+							"key": "region",
+							"value": "Rukn al-Din",
+							"type": "text"
+						},
+						{
+							"key": "Address",
+							"value": "123 Main St.",
+							"type": "text"
+						},
+						{
+							"key": "propType",
+							"value": "apartment",
+							"type": "text"
+						},
+						{
+							"key": "operation",
+							"value": "rent",
+							"type": "text"
+						},
+						{
+							"key": "Price",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "Bedrooms",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "Bathrooms",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "squaremeter",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "Nice apartment in the center of the city.",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/C:/Users/ASUS/Desktop/street-advertising-bus-stop-mock-up_72104-3193.jpg",
+								"/C:/Users/ASUS/Downloads/hero - Copy.png",
+								"/C:/Users/ASUS/Downloads/hero.png",
+								"/C:/Users/ASUS/Downloads/div.property-item.png"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/properties/createProperty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"properties",
+						"createProperty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user properties filter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "berore eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2JlMGYzMmIyYTczZDU5NDY1MWJjNiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMxOTk3NTkzLCJleHAiOjE3MzQ1ODk1OTN9.mFNeXJXG5FN_wNVAIeek61UUww_FsuP8ABFAmnsI3j4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \r\n    \"statusReq\": \"moamn@example.com\",\r\n    \"propType\": \"moamn\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/properties/filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"properties",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "properties filter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \r\n    \"statusReq\": \"moamn@example.com\",\r\n    \"propType\": \"moamn\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/admin/properties/filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"properties",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Propertis",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/properties/getPropertis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"properties",
+						"getPropertis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/rent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/rent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"rent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/getusers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"getusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "berore eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2JlMGYzMmIyYTczZDU5NDY1MWJjNiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMxOTc3NzIxLCJleHAiOjE3MzE5ODEzMjF9.RUKkMaG3L8_y9TazZd3h4F71EBfbjwjQaRBSxSbCR4w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/getprofile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"getprofile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
